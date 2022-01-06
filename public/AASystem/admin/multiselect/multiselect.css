@@ -1,0 +1,80 @@
+#multiselect_style {
+    background-color: #0074D9;
+    width: 200px;
+    border-radius: 10px;
+}
+#multiselect_style_list {
+    max-height: 170px; /* whatever you want*/
+    overflow: auto;
+}
+
+#multiselect_style_p {
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    font-family: 'Avenir-Medium';
+    display:inline-block;
+}
+
+#multiselect_style_i {
+    position: relative;
+    top: 6px;
+    color: white;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+#multiselect_style:hover {
+    background-color: rgba(0, 116, 217, 0.438);
+}
+
+/* #multiselect_style_list {
+    background-color: #0074D9;
+    width: auto;
+    border-radius: 10px;
+} */
+
+#multiselect_style_list ul {
+    width: 120%;
+    border-radius: 10px;
+    background: #0074D9;
+    padding-left: 10px;
+    padding-top: 10px ;
+    padding-bottom: 0px;
+    margin-top: 5px;
+    list-style-type: none;
+}
+
+#multiselect_style_list li {
+    line-height: 0;
+}
+
+#multiselect_style_list li:hover {
+    background-color: #ffffff50;
+    border-radius: 10px;
+}
+
+#multiselect_style_list li p:hover {
+    background-color: #ffffff50;
+    border-radius: 10px;
+}
+
+#multiselect_style_list li i {
+    color: white;
+}
+
+#multiselect_style_list li p {
+    text-align: left;
+    position: relative;
+    color: white;
+    /* font-family: 'Avenir-Book'; */
+    top: -27px;
+    left: 40px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

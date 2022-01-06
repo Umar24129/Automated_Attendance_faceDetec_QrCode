@@ -1,0 +1,4 @@
+subject portion of register student left over. SOmething is wrong with department UI as well
+
+
+// add notification to course teacher and other adds such as alert of bootstrap

@@ -1,0 +1,138 @@
+at face detection part there might be an error  of tnesorflow peers
+so first install peers  needed by
+npm install -g npm-install-peers
+
+
+run this   not above ones  
+npm install --build-from-resource
+
+
+
+and then run    
+npm i @tensorflow/tfjs-node
+
+
+when build error .. u can also check https://github.com/tensorflow/tfjs/issues/2180  for reference .
+
+- >  when i started power shell as admin and typed this command then npm install -g windows-build-tools
+
+- > in  prject env terminal type   npm install @tensorflow/tfjs    and after its complete then install this npm install @tensorflow/tfjs-node
+
+and all done
+
+ 
+// npm i cors     to handle web requests
+
+//  javascript is an async code so   if using setTieout, promises , fetch , ajax, filesystem interaction , database calls , DOM event listeneers  all are 
+ async and will complete in some near future so to recolve that .
+
+.then part of  promises are used which prints value as soon as its recolved and e.g 
+
+if p is a promise 
+
+  let p = new Promise(function(resolve, reject){
+            setTimeout( function(){
+                resolve("Yo!");
+            }, 0)
+            
+        });
+        log(p);
+        setTimeout(function(){
+            log(p);
+        }, 10);
+        log(p);
+        p.then(function(val){
+            log(val);
+        })                              // this .then is where it shows up when promise is resolved
+  // it runs when its resolved . while only   
+setTimeout(function(){
+            log(p);
+        }, 10);
+
+// would run when 10 ms + promise is resolved .
+
+or also wait stuff
+e.g   syn code    
+function synchronous() {
+ console.time("sync");
+ fs.readFileSync("./test.txt")
+ fs.readFileSync("./test2.txt")
+ console.timeEnd("sync")
+}
+
+e.g async code   
+
+
+async function asynchronous() {
+ console.time("async");
+ let p0 = fs.promises.readFile("./test.txt");
+ let p1 = fs.promises.readFile("./test2.txt");
+ await Promise.all([p0,p1])
+ console.timeEnd("async")
+}
+
+
+
+JavaScript�s community always advises us to never ever use synchronous code when doing I/O 
+operations. The well-known reason for that is that we do NOT want to block our code from running 
+other tasks. Since it�s single-threaded, if we have a piece of code that reads a file
+ synchronously, the code will block the whole process until reading is complete. Instead, 
+if we rely on asynchronous code, we can do multiple I/O operations and handle the response
+ of each operation individually when it is complete. No blocking whatsoever.
+
+
+An async function is a function that returns a promise. The special thing about this type
+ of function is that you can use the word await which allows you to pause the execution of 
+a function when a promise is called without having to use the then function to retrieve the
+ value from the promise.
+
+
+ 
+
+/// TO call request within a request
+ let url='http://localhost:3000/l'
+    request(url,(err,ress,body)=>{
+        res.send(ress)
+/l is name of another request runing on same server
+        //////
+
+
+
+
+JSON is already java script object so no need to stringify it
+use stringify only to send data out.
+
+
+//to extract subect name out of a array within a JSON
+//console.log(result.sbj[1].sbt_id)  
+JSON =>  {
+    "_id": "5dc8638f0a792623f46f92b3",
+    "name_student": "Micheal",
+    "id": "1234",
+    "passd": "1234",
+    "dpt": "BSCS",
+    "sbj": [
+        {
+            "sbt_id": "1C",
+            "sbt_name": "English"
+        },
+        {
+            "sbt_id": "1A",
+            "sbt_name": "English"
+        },
+        {
+            "sbt_id": "2A",
+            "sbt_name": "Add Course"
+        }
+    ],
+    "imagepath": "public\\uploads\\usr-1573413775223.PNG"
+}
+
+
+
+
+
+// dont put src and links in header ,, put them in end part of the body else there will issue like cahce error and error 304
+ also use {cache: "no-store"}        to make detch respond 200 as in =>   fetch('http://localhost:2000/getallsubjects',{cache: "no-store"})
+
+ resolve 304's else life sucks :)

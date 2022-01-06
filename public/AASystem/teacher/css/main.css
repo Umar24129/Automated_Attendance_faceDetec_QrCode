@@ -1,0 +1,110 @@
+.margin-top-10{
+	margin-top: 10%;
+}
+.padding-10{
+	padding: 10px;
+}
+
+#side-bar{
+	height: 100%;
+	position: fixed;
+	padding: 0em;
+}
+
+
+.logo-area{
+	border-bottom: solid 1px gray;
+	color: white;
+	font-size: 1.2em;
+	padding-bottom: 10px;
+	padding-left: 8px;
+}
+
+.nav-logout{
+	color: white;
+	padding: 10px;
+	text-decoration-style: none;
+}
+
+.nav-logout:hover{
+	background-color:black;
+	text-decoration: none;
+	color: white;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 16.5%;
+  position: fixed;
+  z-index: 1;
+  top: 98;
+  left: 0;
+  background-color: #5f5f5f;
+  overflow-x: hidden;
+  padding-top: 20px;
+
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 10px;
+  padding-right: 0px;
+  text-decoration: none;
+  
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  border-bottom: solid 1px white;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  background: #2b384d;
+}
+
+.left-icon{
+	margin-right: 5px;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: #2b384d;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #5f5f5f;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+
+.bb {
+  position: absolute;
+  right: 0;
+  width: 300px;
+  height: 700px;
+  border: 3px solid  #5f5f5f;
+  top: 5.3%;
+  display: flex;
+  flex-direction: column-reverse;
+}

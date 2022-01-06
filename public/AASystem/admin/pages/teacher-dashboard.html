@@ -1,0 +1,110 @@
+<html>
+<head>
+	<!--JQuery-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="/AASystem/admin/css/main.css">
+	<link rel="icon" href="/AASystem/teacher/media/aa.png">
+
+	
+
+	<title>Automated Attandance System</title>
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row justify-content-end padding-10" style="background-color: #5f5f5f;">
+			<div class="top-nav"><a href="#" id="logoutbtn" class="nav-logout" onclick="logoutcheck();"><i class="fa fa-sign-out"></i> LOGOUT</a></div>
+		</div>
+			<div class="row">
+				<div class="col-md-2" style="background-color: #5f5f5f;" id="side-bar">
+					<p class="logo-area underline"><img width="50px" height="40px" src="/AASystem/admin/media/aa.png">A A System</p>
+					<div class="sidenav">
+					   <a onclick="admindashss();" style="color:white;"><i class="fa fa-circle left-icon"></i>Dashboard</a>
+					  <button class="dropdown-btn"><i class="fa fa-book left-icon"></i> Courses
+					    <i class="fa fa-caret-down"></i>
+					  </button>
+					  <div class="dropdown-container">
+					    <a onclick="createcoursess();" style="color:white;">Create Course</a>
+					    <a onclick="assigncoursess();" style="color:white;">Assign Course</a>
+					    <a onclick="allcoursess();" style="color:white;">All Courses</a>
+					    <a onclick="deletecoursess();" style="color:white;">Delete Course</a>
+					  </div>
+					  <button class="dropdown-btn"><i class="fa fa-users left-icon"></i> Teachers
+					    <i class="fa fa-caret-down"></i>
+					  </button>
+					  <div class="dropdown-container">
+					    <a onclick="createteachers();" style="color:white;">Create Teacher</a>
+					    <a onclick="allteacherr();" style="color:white;">All Teachers</a>
+					    <a onclick="deleteteacherss();" style="color:white;">Delete Teacher</a>
+					    <a onclick="updateteacherss();" style="color:white;">Update Teacher</a>
+					  </div>
+					  <button class="dropdown-btn"><i class="fa fa-book left-icon"></i>Students
+					    <i class="fa fa-caret-down"></i>
+					  </button>
+					  <div class="dropdown-container">
+					    <a onclick="registerstudentss();" style="color:white;">Register Student</a>
+					    <a onclick="updatestudentss();" style="color:white;">Update Student</a>
+					    <a onclick="deletestudentss();" style="color:white;">Delete Student</a>
+					  </div>
+					  <a onclick="admindashss();" style="color:white;"><i class="fa fa-question-circle left-icon"></i> Queries</a>
+			</div>
+
+
+					<script type="text/javascript">
+					  var dropdown = document.getElementsByClassName("dropdown-btn");
+					  var i;
+
+					  for (i = 0; i < dropdown.length; i++) {
+					    dropdown[i].addEventListener("click", function() {
+					      this.classList.toggle("active");
+					      var dropdownContent = this.nextElementSibling;
+					      if (dropdownContent.style.display === "block") {
+					        dropdownContent.style.display = "none";
+					      } else {
+					        dropdownContent.style.display = "block";
+					      }
+					    });
+					  }
+					</script>
+				</div>
+				<div class="col-md-10" style="left: 17%;">
+					<table class="table table-hover">
+					  <thead>
+					    <tr>
+					      <th scope="col">#</th>
+					      <th scope="col">student Name</th>
+					      <th scope="col">student Id</th>
+					      <th scope="col">mark Attendance</th>
+					    </tr>
+					  </thead>
+					  <tbody>
+					   <!-- <?php 
+					      include "php/elements.php";
+					      $i=0;
+					      while ($i<4) {
+					        manual_attendence();
+					        $i++;
+					      }
+					    ?> -->
+					  </tbody>
+					</table>
+					<div>
+					  <button>
+					    <a href="#" class="form-control btn btn-dark">Submit</a>
+					  </button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <script type="text/javascript" src="/AASystem/admin/js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
